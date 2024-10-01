@@ -8,6 +8,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.boolean :available
       t.datetime :released_at
       t.date :expiry_date
+      t.integer :discount
       t.timestamps
     end
   end
