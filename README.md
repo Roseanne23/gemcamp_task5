@@ -280,3 +280,8 @@ Products.where(price: 50..150)
 ```ruby =
 Products.where(available: false).where('quantity > ?', 0)
 ```
+
+* Fetch products where released_at is after January 1, 2023.
+```ruby =
+Products.where('released_at > ?', Date.new(2023, 1, 1))
+```
