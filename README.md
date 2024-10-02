@@ -252,3 +252,8 @@ Products.where('price > ?', 100)
 ```ruby = 
 Products.where(available: true) 
 ```
+
+* Fetch products where quantity is less than 50.
+```ruby =
+Products.where('quantity < ?', 50)
+```
