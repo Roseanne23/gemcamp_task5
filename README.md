@@ -123,6 +123,18 @@ id: 2,
  discount: 1,
  created_at: Tue, 01 Oct 2024 15:55:42.125436000 UTC +00:00,
  updated_at: Tue, 01 Oct 2024 15:55:42.125436000 UTC +00:00>
+
+ id: 21, 
+ name: "Binggrae Banana Milk Pro",
+ description: "Out of stock",
+ quantity: 50,
+ price: 45.0,
+ available: true,
+ released_at: Fri, 24 Dec 2021 00:00:00.000000000 UTC +00:00,
+ expiry_date: Wed, 02 Oct 2024,
+ discount: 15, 
+ created_at: Wed, 02 Oct 2024 04:41:54.731821000 UTC +00:00,
+ updated_at: Wed, 02 Oct 2024 04:41:54.731821000 UTC +00:00>
 ```
 * Create atleast 10 records using the save method
 
@@ -347,5 +359,10 @@ Products.where(quantity: 0).update_all(available: false)
 
 * Increase the discount by 5% for products where price is greater than 100
 ```ruby =
-Product.where("price > ?", 100).update_all("discount = discount * 1.05")
+Products.where("price > ?", 100).update_all("discount = discount * 1.05")
+```
+
+* Update the description to "Out of stock" for products where available is false
+```ruby = 
+Products.where(available: false).update_all(description: "Out of stock")
 ```
