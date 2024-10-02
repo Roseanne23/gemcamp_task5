@@ -290,3 +290,8 @@ Products.where('released_at > ?', Date.new(2023, 1, 1))
 ```ruby =
 Products.where(expiry_date: nil)
 ```
+
+* Retrieve products where released_at is before January 1, 2022.
+```ruby =
+Products.where('released_at > ?', Date.new(2022, 1, 1))
+```
