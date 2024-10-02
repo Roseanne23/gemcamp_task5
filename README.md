@@ -247,3 +247,8 @@ product.save
 ```ruby =
 Products.where('price > ?', 100)
 ```
+
+* Retrieve products where available is true.
+```ruby = 
+Products.where(available: true) 
+```
