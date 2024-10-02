@@ -339,3 +339,8 @@ Products.where.not(discount: nil)
 ```ruby =
 Products.where(name: "Laptop").update_all(price: 120)
 ```
+
+* Set the available status to false for products where quantity is 0
+```ruby =
+Products.where(quantity: 0).update_all(available: false)
+```
