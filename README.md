@@ -237,3 +237,8 @@ product.expiry_date = DateTime.now + 45
 product.discount = 3.00
 product.save
 ```
+
+* Fetch all products where name is "Laptop".
+```ruby =
+  Products.where(name: 'Laptop')
+```
