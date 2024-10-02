@@ -305,3 +305,7 @@ Products.where(quantity: 10..100)
 ```ruby =
 Products.where('discount >= ?',5)
 ```
+* Retrieve products where price is less than or equal to 200 and available is true
+```ruby =
+Products.where('price <= ? && available = ?', 200, true)
+```
