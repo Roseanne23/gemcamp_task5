@@ -124,3 +124,116 @@ id: 2,
  created_at: Tue, 01 Oct 2024 15:55:42.125436000 UTC +00:00,
  updated_at: Tue, 01 Oct 2024 15:55:42.125436000 UTC +00:00>
 ```
+* Create atleast 10 records using the save method
+
+```ruby =
+product = Products.new
+product.name = 'Cheddar Cheese'
+product.description = 'Natural Cheese'
+product.quantity = 1
+product.price = 65.00
+product.available = true
+product.released_at = DateTime.now - 5
+product.expiry_date = DateTime.now + 6
+product.discount = 1.00
+product.save
+
+product = Products.new
+product.name = 'Gouda Cheese'
+product.description = "Creamy Yellow from Cow's Milk"
+product.quantity = 2
+product.price = 265.00
+product.available = true
+product.released_at = DateTime.now - 4
+product.expiry_date = DateTime.now + 8
+product.discount = 3.00
+product.save
+
+product = Products.new
+product.name = 'Goat Cheese'
+product.description = "Fresh Soft from Goat's Milk"
+product.quantity = 2
+product.price = 150.00
+product.available = true
+product.released_at = DateTime.now - 2
+product.expiry_date = DateTime.now + 45
+product.discount = 15.00
+product.save
+
+product = Products.new
+product.name = 'Cream Cheese'
+product.description = 'Soft Mild Tasting Cheese'
+product.quantity = 1
+product.price = 75.00
+product.available = false
+product.released_at = DateTime.now - 1
+product.expiry_date = DateTime.now + 35
+product.discount = 2.00
+product.save
+
+product = Products.new
+product.name = 'Mozzarella Cheese'
+product.description = 'Semi Soft Non-Aged Cheese'
+product.quantity = 2
+product.price = 500.00
+product.available = true
+product.released_at = DateTime.now - 1
+product.expiry_date = DateTime.now + 65
+product.discount = 12.00
+product.save
+
+product = Products.new
+product.name = 'Hard Cheese'
+product.description = 'Extra Hard Cheese'
+product.quantity = 1
+product.price = 2050.00
+product.available = false
+product.released_at = DateTime.now - 4
+product.expiry_date = DateTime.now + 150
+product.discount = 25.00
+product.save
+
+product = Products.new
+product.name = 'Blue Cheese'
+product.description = 'made from cultured edible molds'
+product.quantity = 3
+product.price = 650.00
+product.available = true
+product.released_at = DateTime.now - 1
+product.expiry_date = DateTime.now + 75
+product.discount = 5.00
+product.save
+
+product = Products.new
+product.name = 'Feta Cheese'
+product.description = "Made from Sheep's Milk"
+product.quantity = 2
+product.price = 180.00
+product.available = true
+product.released_at = DateTime.now - 6
+product.expiry_date = DateTime.now + 95
+product.discount = 12.00
+product.save
+
+product = Products.new
+product.name = 'Brie Cheese'
+product.description = 'pale coloured greyish cheese'
+product.quantity = 1
+product.price = 120.00
+product.available = false
+product.released_at = DateTime.now - 2
+product.expiry_date = DateTime.now + 6
+product.discount = 1.00
+product.save
+
+product = Products.new
+product.name = 'Cottage Cheese'
+product.description = 'curdled milk product'
+product.quantity = 1
+product.price = 350.00
+product.available = true
+product.released_at = DateTime.now - 5
+product.expiry_date = DateTime.now + 45
+product.discount = 3.00
+product.save
+```
