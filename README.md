@@ -314,3 +314,8 @@ Products.where('price <= ? && available = ?', 200, true)
 ```ruby =
 Products.where('expiry_date < ?', Date.today)
 ```
+
+* Find products where name starts with the letter "A"
+```ruby =
+Products.where("name LIKE ?", "A%")
+```
