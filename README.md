@@ -266,3 +266,7 @@ Products.where('discount =?', 10)
 ```ruby =
 Products.where('name LIKE ?', '%Pro%')
 ```
+* Fetch products where description includes the word "portable".
+```ruby =
+Products.where(description: 'portable')
+```
