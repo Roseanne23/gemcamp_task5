@@ -344,3 +344,8 @@ Products.where(name: "Laptop").update_all(price: 120)
 ```ruby =
 Products.where(quantity: 0).update_all(available: false)
 ```
+
+* Increase the discount by 5% for products where price is greater than 100
+```ruby =
+Product.where("price > ?", 100).update_all("discount = discount * 1.05")
+```
