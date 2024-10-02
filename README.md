@@ -324,3 +324,8 @@ Products.where("name LIKE ?", "A%")
 ```ruby =
 Products.where.not(price: 100)
 ```
+
+* Fetch products where quantity is nil
+```ruby =
+Products.where(quantity: nil)
+```
