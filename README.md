@@ -13,6 +13,7 @@ Products.create(name: 'Nestle Non-Fat Calcium Drink', description: 'Non-Fat Drin
 Products.create(name: 'Hacienda Macalauan Milk Drink', description: 'Fresh Whole Milk Drink', quantity: 10, price: 1650.00, available: true, released_at: Date.new(2024, 10, 22), expiry_date: nil, discount: 2.00)
 Products.create(name: 'Emborg Full Milk', description: 'Fresh Whole Milk Drink', quantity: 2, price: 98.00, available: true, released_at: Date.new(2024, 06, 24), expiry_date: nil, discount: 1.00)
 Products.create(name: 'Binggrae Banana Milk Pro', description: 'Out of stock', quantity: 50, price: 45.00, available: true, released_at: Date.new(2021, 12, 24), expiry_date: Date.today, discount: 15.00)
+Products.create(name: '1 Box Korean Milk', description: 'Sale items', quantity: 0, price: 2450, available: false, released_at: Date.new(2018, 02, 8), expiry_date: nil, discount: 20.00)
 ```
 
 * Create atleast 10 records using the save method
@@ -294,4 +295,9 @@ Products.where('price < ?', 50).update_all(released_at: Time.current)
 * Reduce the price by 20% for products where quantity is less than 5
 ```ruby =
 Products.where('quantity < ?', 5).update_all('price = price * 0.8')
+``` 
+
+* Set the discount to 0% for products with a price greater than or equal to 300
+```ruby =
+Products.where('price >= ?', 300).update_all(discount: 0)
 ``` 
