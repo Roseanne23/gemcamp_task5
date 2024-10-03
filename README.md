@@ -281,8 +281,12 @@ Products.where('expiry_date < ?', Date.today).update_all(discount: nil)
 Products.where('price > ?', 500).update_all(name: 'Premium Laptop')
 ``` 
 
-
 * Set the quantity to nil for products where available is false
 ```ruby =
 Products.where(available: false).update_all(quantity: nil)
+``` 
+
+* Update released_at to the current date for products with a price less than 50
+```ruby =
+Products.where('price < ?', 50).update_all(released_at: Time.current)
 ``` 
