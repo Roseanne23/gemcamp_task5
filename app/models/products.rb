@@ -1,2 +1,2 @@
-class Product < ApplicationRecord
+class Products < ApplicationRecord
 end
